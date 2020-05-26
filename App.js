@@ -16,10 +16,15 @@ function HomeScreen({navigation}) {
         title="Details"
         onPress={() => navigation.navigate('Details')}
       />
+      <Button
+        title="Display cool message"
+        onPress={() => }
+      />
     </View>
   );
 }
 
+//PURPOSE:  Defines the attributes of the DetailsScreen page
 function DetailsScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -30,6 +35,7 @@ function DetailsScreen() {
 
 const Stack = createStackNavigator();
 
+//PURPOSE:  Renders app
 export default function App() {
   return (
     <NavigationContainer>
@@ -41,7 +47,7 @@ export default function App() {
   );
 }
 
-
+//PURPOSE:  Defines app style
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -54,7 +60,7 @@ const styles = StyleSheet.create({
 
 function WelcomeMsg(props)  {
   if (props.pain == "true"){
-    return <h2>MAX PAIN</h2>;
+    return <h2>TRUE</h2>;
   }
-  return <h2>AHHHHHHHHHHHH, {props.name}</h2>;
+  return <h2>NOT TRUE, {props.name}</h2>;
 }
