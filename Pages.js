@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { styles } from './Style'
+import { styles, stylesBtn } from './Style'
 
 /*----Navigation stuff----*/
 
@@ -17,14 +17,16 @@ export function HomeScreen({navigation}) {
         <View style={styles}>
             <Text>Home Screen</Text>
             <Text>{count}</Text>
+            <br></br>
             <Button
-            title="Details"
-            onPress={() => navigation.navigate('Details')}
+                title="Details"
+                onPress={() => navigation.navigate('Details')}
             />
             <Button
-            title="Count"
-            onPress={() => setCount(count + 1)}  
+                title="Count"
+                onPress={() => setCount(count + 1)}  
             />
+            
         </View>
     );
 }
