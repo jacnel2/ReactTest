@@ -13,7 +13,7 @@ function HomeScreen({navigation}) {
   const [count, setCount] = useState(0);
 
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={styles}>
       <Text>Home Screen</Text>
       <Text>{count}</Text>
       <Button
@@ -31,7 +31,7 @@ function HomeScreen({navigation}) {
 //PURPOSE:  Defines the attributes of the DetailsScreen page
 function DetailsScreen() {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <View style={styles}>
       <Text>This is technically an 'app'</Text>
     </View>
   );
@@ -52,19 +52,4 @@ export default function App() {
 }
 
 //PURPOSE:  Defines app style
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#4287f5',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
-
-function WelcomeMsg(props)  {
-  if (props.pain == "true"){
-    return <h2>TRUE</h2>;
-  }
-  return <h2>NOT TRUE, {props.name}</h2>;
-}
+const styles = { flex: 1, alignItems: 'center', justifyContent: 'center' };
