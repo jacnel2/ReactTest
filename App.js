@@ -16,10 +16,6 @@ function HomeScreen({navigation}) {
         title="Details"
         onPress={() => navigation.navigate('Details')}
       />
-      <Button
-        title="Display cool message"
-        onPress={() => }
-      />
     </View>
   );
 }
