@@ -12,19 +12,26 @@ export function HomeScreen({navigation}) {
     const [count, setCount] = useState(0);
   
     return (
-        <View style={styles}>
-            <Text>Home Screen</Text>
-            <Text>{count}</Text>
-            <br></br>
-            <Button
-                title="Details"
-                onPress={() => navigation.navigate('Details')}
-            />
-            <Button
-                title="Count"
-                onPress={() => setCount(count + 1)}  
-            />
-            
+        <View>
+            <View style={styles.default}>
+                <Text style={styles.txtSig}>Home Screen</Text>
+                <Text style={styles.txtMin}>{count}</Text>
+                <br></br>
+                <View style={styles.btnGroup}>
+                    <View style={styles.btnInd}>
+                        <Button
+                            title="Details"
+                            onPress={() => navigation.navigate('Details')}
+                        />
+                    </View>
+                    <View style={styles.btnInd}>
+                        <Button
+                            title="Count"
+                            onPress={() => setCount(count + 1)}  
+                        />
+                    </View>
+                </View>
+            </View>
         </View>
     );
 }
@@ -32,8 +39,8 @@ export function HomeScreen({navigation}) {
 //PURPOSE:  Defines the attributes of the DetailsScreen page
 export function DetailsScreen() {
     return (
-        <View style={styles}>
-            <Text>This is technically an 'app'</Text>
+        <View style={styles.default}>
+            <Text style={styles.txtMin}>This is technically an 'app'</Text>
         </View>
     );
 }
