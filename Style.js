@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 
 //PURPOSE:  Defines app style

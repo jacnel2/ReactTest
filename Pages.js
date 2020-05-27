@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Text, View, Button} from 'react-native';
-import { styles } from './Style'
+import { styles } from './Style';
+import PropTypes from 'prop-types';
 
 /*----Navigation stuff----*/
 
 //FUNCTION: HomeScreen
-//PURPOSE:  Defines attributes of the HomeScreen page
+//PURPOSE:  Defines content of the HomeScreen page
 //PARAMS:   {navigation} by default provided to all items in Stack Navigator
 export function HomeScreen({navigation}) {
     //state variable
@@ -27,6 +28,7 @@ export function HomeScreen({navigation}) {
                     <View style={styles.btnInd}>
                         <Button
                             title="Count"
+                            //Button on press increments count hook (state var) which is displayed on screen
                             onPress={() => setCount(count + 1)}  
                         />
                     </View>
@@ -35,12 +37,18 @@ export function HomeScreen({navigation}) {
         </View>
     );
 }
+
+//PURPOSE: Prop validation to keep things stable
+HomeScreen.propTypes = {
+    //navigation prop of function HomeScreen must be instance of Navigator
+    navigation: PropTypes.instanceOf(Navigator)
+}
   
-//PURPOSE:  Defines the attributes of the DetailsScreen page
+//PURPOSE:  Defines the content of the DetailsScreen page
 export function DetailsScreen() {
     return (
         <View style={styles.default}>
-            <Text style={styles.txtMin}>This is technically an 'app'</Text>
+            <Text style={styles.txtMin}>This is technically an app</Text>
         </View>
     );
 }
