@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-import { styles, stylesBtn } from './Style'
+import { Text, View, Button} from 'react-native';
+import { styles } from './Style'
 
 /*----Navigation stuff----*/
 
